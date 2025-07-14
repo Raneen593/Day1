@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 9</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+
+        .welcome-message {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px;
+            border-radius: 5px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .form-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        input,
+        button {
+            padding: 10px;
+            margin: 10px 0;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .message {
+            margin-top: 10px;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="welcome-message" id="welcomeMessage">
+        مرحبًا بك في صفحتنا!
+    </div>
+
+    <div class="form-container">
+        <h2>نموذج التسجيل</h2>
+        <form id="nameForm">
+            <label for="name">اسمك :</label>
+            <input type="text" id="name" placeholder="أدخل اسمك">
+            <button type="button" onclick="showMessage()">إرسال</button>
+            <div class="message" id="message"></div>
+        </form>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>اليوم</th>
+                <th>الموضوع</th>
+                <th>الحالة</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>اليوم 1</td>
+                <td>مقدمة في HTML</td>
+                <td>✔️ مكتمل</td>
+            </tr>
+            <tr>
+                <td>اليوم 2</td>
+                <td>مقدمة في JavaScript</td>
+                <td>⚡ قيد التنفيذ</td>
+            </tr>
+            <tr>
+                <td>اليوم 3</td>
+                <td>مقدمة في CSS</td>
+                <td>❌ غير مكتمل</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script>
+        window.onload = function () {
+            const messages = [
+                "مرحبًا بك في موقعنا!",
+                "أهلاً وسهلاً!",
+                "نرحب بزيارتك!",
+                "سعيدون بوجودك هنا!"
+            ];
+
+            let counter = 0;
+            const welcomeElement = document.getElementById('welcomeMessage');
+            setInterval(() => {
+                welcomeElement.textContent = messages[counter % messages.length];
+                counter++;
+            }, 3000);
+        };
+
+        function showMessage() {
+            const name = document.getElementById('name').value;
+            const messageElement = document.getElementById('message');
+
+            if (name.trim() === '') {
+                messageElement.textContent = 'الرجاء إدخال اسمك!';
+                messageElement.style.backgroundColor = '#ffdddd';
+                messageElement.style.color = '#ff0000';
+            } else {
+                messageElement.textContent = `شكرًا لك ${name}! تم استلام معلوماتك بنجاح.`;
+                messageElement.style.backgroundColor = '#ddffdd';
+                messageElement.style.color = '#006400';
+            }
+        }
+    </script>
+</body>
+
+</html>

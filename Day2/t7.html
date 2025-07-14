@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 7</title>
+    <style>
+    *{
+        box-sizing: border-box;
+    }
+    .card{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #b2aba2;
+    padding: 21px;
+    margin: 25px;
+    border-radius: 21px;
+    }
+    input, textarea,select,button{
+        width: 100%;
+        padding: 10px;
+        margin: 15px 0;
+        border: 1px solid #ccc;
+    }
+    .btu:hover{
+        background-color: rgb(27, 82, 82);
+        transition: .5s ease-in-out;
+        color: wheat;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="card">
+        <form action="" method="get" class="log-form">
+            <label for="n">Full Name</label> <br>
+            <input id="n" type="text"> <br>
+            <label for="e">Email</label> <br>
+            <input id="e" type="email"> <br>
+            <label for="g">Gender</label> <br>
+            <select id="g">
+                <option value="Male">Male</option>
+                <option value="Famale">Famale</option>
+            </select> <br>
+            <label for="m">Message</label> <br>
+            <textarea name="Message" id="m" cols="30" rows="10"></textarea> <br>
+            <button type="submit">Send Data</button>
+            <button type="submit" class="btu">btu</button>
+        </form>
+    </div>
+    <hr>
+    <div class="card">
+        <h3>Frontend Technologies to Learn:</h3>
+        <ol class="first-ol">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+        </ol>
+        <ol class="second-ol">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+        </ol>
+        <h3>Shopping List:</h3>
+        <ul class="first-ul">
+            <li>Milk</li>
+            <li>Bread</li>
+            <li>Eggs</li>
+        </ul>
+        <ul class="second-ul">
+            <li>Milk</li>
+            <li>Bread</li>
+            <li>Eggs</li>
+        </ul>
+        <button  type="submit" class="btu">btu</button>
+    </div>
+    <hr>
+    <div class="card">
+        <table border="2">
+            <tr>
+                <th>id</th>
+                <th>Name</th>
+                <th>Subject</th>
+                <th>Degree</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Ahmed</td>
+                <td>Math</td>
+                <td>88</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Omar</td>
+                <td>Secince</td>
+                <td>96</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Ali</td>
+                <td>Geography</td>
+                <td>80</td>
+            </tr>
+            <tfoot>
+                <td>#</td>
+                <td>Name</td>
+                <td>Subject</td>
+                <td>Grade</td>
+            </tfoot>
+        </table>
+        <button type="submit" class="btu">btu</button>
+    </div>
+</body>
+
+</html>

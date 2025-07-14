@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 6</title>
+    <style>
+    *{
+        box-sizing: border-box;
+    }
+    body{
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        background-color: #b2aba2;
+        padding: 25px;
+    }
+    form{
+        background-color: #825e7e;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 36px 17px 37px #391a2d94;
+    }
+    input, textarea,select,button{
+        width: 100%;
+        padding: 10px;
+        margin: 15px 0;
+        border: 1px solid #ccc;
+    }
+    table{
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #683860;
+    color: white;
+
+    }
+    table th{
+    background-color: #551d45;
+    color: #ffffffb8;
+    padding: 10px;
+
+    }
+    table td{
+        padding: 10px;
+        text-align: center;
+        border-radius: 10px;
+    }
+    ul , ol{
+    background: #6b4259;
+    padding: 15px;
+    border-radius: 10px;
+    color: #e5c3df;
+    margin: 16px;
+    padding: 22px;
+    }
+    .font{
+        font-weight: bold;
+        font-size: 30px;
+    }
+    </style>
+</head>
+<body>
+    <form action="" method="get" class="log-form">
+        <label for="">Full Name</label> <br>
+        <input type="text"> <br>
+        <label for="">Email</label> <br>
+        <input type="email"> <br>
+        <label for="">Gender</label> <br>
+        <select>
+            <option value="Male">Male</option>
+            <option value="Famale">Famale</option>
+        </select> <br>
+        <label for="">Message</label> <br>
+        <textarea name="Message" id="" cols="30" rows="10"></textarea> <br>
+        <button type="submit">Send Data</button>
+    </form>
+    <hr>
+    <h3 class="font">Frontend Technologies to Learn:</h3>
+    <ol class="first-ol">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+    </ol>
+    <ol class="second-ol">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+    </ol>
+    <h3 class="font">Shopping List:</h3>
+    <ul class="first-ul">
+        <li>Milk</li>
+        <li>Bread</li>
+        <li>Eggs</li>
+    </ul>
+    <ul class="second-ul">
+        <li>Milk</li>
+        <li>Bread</li>
+        <li>Eggs</li>
+    </ul>
+    <hr>
+    <table border="2">
+        <tr>
+            <th>id</th>
+            <th>Name</th>
+            <th>Subject</th>
+            <th>Degree</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Ahmed</td>
+            <td>Math</td>
+            <td>88</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Omar</td>
+            <td>Secince</td>
+            <td>96</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Ali</td>
+            <td>Geography</td>
+            <td>80</td>
+        </tr>
+        <tfoot>
+            <td>#</td>
+            <td>Name</td>
+            <td>Subject</td>
+            <td>Grade</td>
+        </tfoot>
+    </table>
+</body>
+</html>

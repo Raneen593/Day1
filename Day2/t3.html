@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 3</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            background: linear-gradient(50deg , #00f , #af0);
+            height: 100vh;
+            padding: 50px 0;
+            margin: 0;
+        }
+            input,textarea,button,select {
+                display: block;
+            }
+            .log-form{
+                width: fit-content;
+                margin: 10px auto;
+                padding: 50px;
+                background-color: rgb(50 154 108);
+            }
+            .log-form input , .log-form textarea , .log-form button , .log-form select {
+                width: 100%;
+                margin: 10px;
+                padding: 10px;
+            }
+    </style>
+</head>
+<body>
+    <form action="" method="get" class="log-form">
+        <label for="">Full Name</label> <br>
+        <input type="text"> <br>
+        <label for="">Email</label> <br>
+        <input type="email"> <br>
+        <label for="">Gender</label> <br>
+        <select>
+            <option value="Male">Male</option>
+            <option value="Famale">Famale</option>
+        </select> <br>
+        <label for="">Message</label> <br>
+        <textarea name="Message" id="" cols="30" rows="10"></textarea> <br>
+        <button type="submit">Send Data</button>
+    </form>
+</body>
+</html>
