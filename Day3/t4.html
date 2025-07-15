@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>نموذج تسجيل الطالب</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-dark">
+    <div class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="card bg-dark text-white border-secondary">
+                    <div class="card-header bg-secondary">
+                        <h2 class="text-center mb-0">نموذج تسجيل الطالب</h2>
+                    </div>
+                    <div class="card-body">
+                        <form class="p-3 text-end was-validated form-control form-group needs-validation col-2 mt-2 bg-dark text-white"
+                            novalidate>
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label for="fullName" class="form-label">الاسم الكامل</label>
+                                    <input type="text" class="form-control" id="fullName" required>
+                                    <div class="invalid-feedback">أدخل الاسم الكامل بشكل صحيح</div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label for="email" class="form-label">البريد الإلكتروني</label>
+                                    <input type="email" class="form-control" id="email" value="ahmed" required>
+                                    <div class="invalid-feedback">أدخل بريد إلكتروني صحيح</div>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <label for="age" class="form-label">العمر</label>
+                                    <input type="number" class="form-control" id="age" min="15" max="30" required>
+                                    <div class="invalid-feedback">أدخل العمر بشكل صحيح (15-30)</div>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <label for="gender" class="form-label">الجنس</label>
+                                    <select class="form-select" id="gender" required>
+                                        <option value="" selected disabled>اختر الجنس</option>
+                                        <option value="male">ذكر</option>
+                                        <option value="female">أنثى</option>
+                                    </select>
+                                    <div class="invalid-feedback">اختر الجنس</div>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <label for="grade" class="form-label">الدرجة</label>
+                                    <input type="number" class="form-control" id="grade" min="0" max="100" required>
+                                    <div class="invalid-feedback">أدخل الدرجة من 0 إلى 100</div>
+                                </div>
+
+                                <div class="col-12">
+                                    <label for="notes" class="form-label">ملاحظات</label>
+                                    <textarea class="form-control" id="notes" rows="3" required></textarea>
+                                    <div class="invalid-feedback"></div>
+                                </div>
+
+                                <div class="col-12 d-flex justify-content-end gap-2">
+                                    <button type="submit" class="btn btn-primary">إرسال البيانات</button>
+                                    <button type="button" class="btn btn-outline-light" data-bs-toggle="modal"
+                                        data-bs-target="#studentsModal">
+                                        عرض الطالب
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="studentsModal" tabindex="-1" aria-labelledby="studentsModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="studentsModalLabel">قائمة الطلاب</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="table-responsive">
+                        <table class="table table-bordered table-striped">
+                            <thead class="table-dark">
+                                <tr>
+                                    <th>التقدير</th>
+                                    <th>الدرجة</th>
+                                    <th>الاسم</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>امتياز</td>
+                                    <td>90</td>
+                                    <td>أحمد علي</td>
+                                </tr>
+                                <tr>
+                                    <td>جيد</td>
+                                    <td>72</td>
+                                    <td>محمود سمير</td>
+                                </tr>
+                                <tr>
+                                    <td>راسب</td>
+                                    <td>45</td>
+                                    <td>كريم فؤاد</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">إغلاق</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
