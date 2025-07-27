@@ -4,7 +4,6 @@ define('DB_USER', 'root');
 define('DB_PASS', 'test123root'); 
 define('DB_NAME', 'training_system');
 
-// بدء الجلسة
 if (session_status() !== PHP_SESSION_ACTIVE) {
     session_start();
 }
