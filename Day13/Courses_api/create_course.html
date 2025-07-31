@@ -1,0 +1,59 @@
+<html lang="en">
+
+<head>
+    <style>
+        form {
+            margin: 10px auto;
+            box-sizing: border-box;
+        }
+
+        form input {
+            display: block;
+            margin: 10px;
+            padding: 10px;
+            width: 90%;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="" method="post" id="sendData">
+        <input type="text" name="title" id="" placeholder="Course title">
+        <input type="text" name="description" id="" placeholder="description name">
+        <input type="number" name="hours" id="" placeholder="Duration (hours)">
+        <input type="number" name="price" id="" placeholder="Course price">
+
+        <input type="submit" value="Submit">
+    </form>
+    <p id="message"></p>
+
+    <script>
+        var form = document.getElementById('sendData');
+        form.addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            fetch('http://localhost/Day13/courses_api/post.php', {
+                method: 'POST',
+                body: JSON.stringify({
+                    title: this.title.value,
+                    description: this.description.value,
+                    hours: this.hours.value,
+                    price: this.price.value
+                }),
+                headers: { "Content-Type": "application/json" }
+            })
+                .then(response => response.json())
+                .then(data => {
+                    console.log(data.status);
+                    console.log(data.message);
+                    document.getElementById("message").innerHTML =
+                        data.status == "inserted"
+                            ? "<p style='color:green'>Course added successfully!</p>"
+                            : "<p style='color:red'>Error: " + data.message + "</p>";
+                });
+        });
+    </script>
+</body>
+
+</html>
