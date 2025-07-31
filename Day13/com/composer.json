@@ -1,0 +1,11 @@
+{
+    "name": "hp/day13",
+    "autoload": {
+        "psr-4": {
+            "Hp\\Day13\\": "src/"
+        }
+    },
+    "require": {
+        "dompdf/dompdf": "*"
+    }
+}
